@@ -518,7 +518,7 @@ ul { list-style: none; }
   margin-bottom: 46px;
 }
 .hub-grid {
-  max-width: 1080px;
+  max-width: 1140px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
