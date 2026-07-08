@@ -1,0 +1,12 @@
+{
+  "name": "sulore-website",
+  "version": "1.0.0",
+  "description": "Website SULORE - Wisata Susur Goa Ngerong Rengel",
+  "scripts": {
+    "dev": "npx --yes live-server . --port=3000",
+    "start": "npx --yes live-server --port=3000"
+  },
+  "keywords": ["sulore", "goa-ngerong", "wisata", "rengel"],
+  "author": "SULORE Team",
+  "license": "ISC"
+}
