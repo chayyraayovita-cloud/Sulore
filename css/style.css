@@ -667,6 +667,10 @@ ul { list-style: none; }
 
 /* ── EDUKASI ── */
 #edukasi { padding: 80px 40px; background: var(--white); }
+.edukasi-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
 .edukasi-intro {
   max-width: 880px;
   font-size: 0.95rem;
@@ -675,7 +679,8 @@ ul { list-style: none; }
   margin-bottom: 48px;
 }
 .edukasi-grid {
-  max-width: 1080px;
+  max-width: 1140px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
