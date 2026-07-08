@@ -62,32 +62,7 @@ function renderDate() {
 
 /* ── FAQ ACCORDION ── */
 function initFAQ() {
-  document.querySelectorAll('.faq-item').forEach(item => {
-    const q = item.querySelector('.faq-q');
-    const a = item.querySelector('.faq-answer');
-    if (!q || !a) return;
-
-    q.addEventListener('click', () => {
-      const isOpen = a.classList.contains('open');
-
-      // Close all others
-      document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.remove('open'));
-      document.querySelectorAll('.faq-item').forEach(it => it.classList.remove('active'));
-
-      // Toggle current
-      if (!isOpen) {
-        a.classList.add('open');
-        item.classList.add('active');
-      }
-      
-      // Update Lenis scroll layout
-      if (lenis) {
-        setTimeout(() => {
-          lenis.resize();
-        }, 300);
-      }
-    });
-  });
+  // Frequently Asked Questions are now shown immediately, no click-to-expand needed.
 }
 
 /* ── IMAGE ERROR FALLBACK ── */
