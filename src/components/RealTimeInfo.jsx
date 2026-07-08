@@ -79,7 +79,7 @@ export default function RealTimeInfo() {
       id: 4,
       title: 'Kuota Kunjungan Peserta',
       status: 'Masih Tersedia',
-      description: 'Sisa kuota hari ini : 5 peserta/perahu (kuota maksimal 7 peserta/perahu).',
+      description: 'Sisa kuota hari ini : 5 peserta/perahu (kuota maksimal 6 peserta/perahu).',
       icon: (
         <svg viewBox="0 0 100 60" className="info-icon-svg">
           {/* Yellow/Orange Raft with paddles */}

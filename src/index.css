@@ -833,6 +833,8 @@ p {
 
 .explore-btn {
   min-width: 160px;
+  pointer-events: none;
+  cursor: default;
 }
 
 @media (max-width: 992px) {
@@ -1222,7 +1224,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: default;
   transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s ease, box-shadow 0.4s ease;
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
@@ -1568,3 +1570,31 @@ p {
     padding: 24px 20px;
   }
 }
+
+/* Tablet Layout for grids (601px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 800px;
+    margin: 40px auto 0;
+  }
+  .guides-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 800px;
+    margin: 20px auto 0;
+  }
+  .folklore-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 800px;
+    margin: 40px auto 0;
+  }
+  .edu-cards-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+}
+
