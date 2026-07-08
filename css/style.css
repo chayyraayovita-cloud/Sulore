@@ -702,23 +702,31 @@ ul { list-style: none; }
 }
 .edu-card p { font-size: 0.88rem; line-height: 1.78; color: var(--text-body); }
 
-/* ── HEWAN ENDEMIK ── */
+/* ── HEWAN GOA NGERONG ── */
 #hewan { padding: 60px 40px 90px; background: var(--white); }
-.hewan-header-row {
-  display: flex;
-  align-items: baseline;
-  gap: 18px;
-  flex-wrap: wrap;
-  margin-bottom: 8px;
+.hewan-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.hewan-header-block {
+  margin-bottom: 48px;
 }
 .hewan-main-title {
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
-  font-size: 1.7rem;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   color: var(--teal);
+  line-height: 1.1;
+  margin-bottom: 14px;
 }
-.hewan-header-note { font-size: 0.88rem; color: var(--text-body); }
-.hewan-header-sub { font-size: 0.88rem; color: var(--text-body); margin-bottom: 36px; }
+.hewan-header-sub {
+  max-width: 680px;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-body);
+  margin-bottom: 36px;
+}
+
 
 /* ── Hewan grid: 3 ikon per baris, simetris & memenuhi lebar container ── */
 .hewan-grid-6 {
