@@ -1,17 +1,901 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sulore - Wisata Susur Goa Ngerong</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SULORE – Wisata Susur Goa Ngerong Tuban</title>
+  <meta name="description" content="Website resmi Wisata Susur Goa Ngerong Desa Rengel, Tuban. Informasi perjalanan, desain interaktif, dan edukasi folklor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 1 – HERO
+═══════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="assets/images/hero-cave.jpg"
+         alt="Goa Ngerong Cave"
+         class="hero-bg-img"
+         data-fallback-bg="linear-gradient(160deg,#2a1200,#3d2010 40%,#1a0800 75%,#080300)"
+         onerror="this.style.opacity='0'">
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <!-- Logo Strip -->
+    <div class="logo-strip">
+      <div class="logo-item">
+        <img src="assets/images/logo-bumdes.jpg" alt="BUM Desa Rengel"
+             style="width:48px;height:48px;object-fit:cover;border-radius:50%;">
+      </div>
+      <div class="logo-divider"></div>
+      <div class="logo-item">
+        <img src="assets/images/logo-tuban.png" alt="Kabupaten Tuban"
+             style="width:48px;height:48px;object-fit:cover;border-radius:50%;">
+      </div>
+      <div class="logo-divider"></div>
+      <div class="logo-item">
+        <img src="assets/images/logo-ayo-ning-tuban.png" alt="Ayo Ning Tuban"
+             style="width:48px;height:48px;object-fit:cover;border-radius:50%;">
+      </div>
+      <div class="logo-divider"></div>
+      <div class="logo-item">
+        <img src="assets/images/logo-bat.png" alt="Logo SULORE"
+             class="logo-bat-img">
+      </div>
+    </div>
+
+    <p class="hero-supertitle">Selamat Datang di Website</p>
+    <h1 class="hero-title">SULORE</h1>
+    <p class="hero-tagline">• Informasi Perjalanan &nbsp;•&nbsp; Desain Interaktif &nbsp;•&nbsp; Edukasi Folklor</p>
+
+    <button class="btn-teal" onclick="scrollToSection('intro')" id="btn-jelajahi-hero">
+      JELAJAHI SEKARANG
+    </button>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 2 – INTRO / WISATA SUSUR GOA NGERONG
+═══════════════════════════════════════════════ -->
+<section id="intro">
+  <div class="intro-grid">
+    <div class="intro-text">
+      <h2 class="intro-heading">
+        WISATA SUSUR<br>
+        GOA <span class="text-orange">NGERONG</span>
+      </h2>
+      <p>
+        Jelajahi eksotisme Goa Ngerong Tuban melalui jalur petualangan menyusuri aliran sungai
+        pertama yang kini telah hadir di jantung Bumi Wali. Penuhi rasa penasaran dan adrenalin akan
+        keindahan dalam goa, gemercik mata air yang jernih, kawanan kelelawar, serta misteri cerita
+        setempat siap mengguncang kayuhan perahu karetmu menuju petualangan penuh makna.
+      </p>
+      <div>
+        <button class="btn-teal" onclick="scrollToSection('why-choose')" id="btn-tertarik">
+          TERTARIK MENCOBA?
+        </button>
+      </div>
+    </div>
+    <div>
+      <img src="assets/images/cave-group.jpg"
+           alt="Pengunjung Wisata Susur Goa Ngerong"
+           class="intro-img"
+           data-fallback-bg="linear-gradient(135deg,#1a3a5c,#2d6a8a)"
+           onerror="this.style.background='linear-gradient(135deg,#1a3a5c,#2d6a8a)'">
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 3 – MENGAPA MEMILIH GOA NGERONG? (Row 1)
+═══════════════════════════════════════════════ -->
+<section id="why-choose">
+  <div class="why-title-wrap">
+    <h2 class="section-title">
+      MENGAPA HARUS MEMILIH<br>
+      GOA <span class="text-orange">NGERONG?</span>
+    </h2>
+  </div>
+  <div class="features-grid">
+
+    <!-- Pemesanan Mudah dan Cepat -->
+    <div class="feature-card">
+      <div class="feat-icon-ring">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="6" width="26" height="34" rx="3" fill="none" stroke="white" stroke-width="2.5"/>
+          <line x1="14" y1="15" x2="28" y2="15" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="14" y1="21" x2="28" y2="21" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="14" y1="27" x2="22" y2="27" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="36" cy="36" r="9" fill="white"/>
+          <polyline points="30,36 34,40 42,32" stroke="#3D8B89" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <h3 class="feat-title"><em>Pemesanan mudah<br>dan cepat</em></h3>
+      <p>Tidak ribet dan bebas antre panjang. Bisa langsung <em>booking</em> paket wisata, kapan saja dan di mana saja.</p>
+    </div>
+
+    <!-- Pelayanan 24 jam -->
+    <div class="feature-card">
+      <div class="feat-icon-ring">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="17" fill="none" stroke="white" stroke-width="2.5"/>
+          <line x1="24" y1="10" x2="24" y2="24" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="24" x2="33" y2="30" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="24" cy="24" r="2.5" fill="white"/>
+        </svg>
+      </div>
+      <h3 class="feat-title"><em>Pelayanan 24 jam</em></h3>
+      <p>Tersedia layanan <em>online</em> yang selalu aktif menjawab pertanyaan seputar informasi wisata tanpa mengenal waktu.</p>
+    </div>
+
+    <!-- Dokumentasi -->
+    <div class="feature-card">
+      <div class="feat-icon-ring">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="14" width="36" height="26" rx="3" fill="none" stroke="white" stroke-width="2.5"/>
+          <circle cx="24" cy="27" r="7" fill="none" stroke="white" stroke-width="2.5"/>
+          <path d="M18 14 l2-4 h8 l2 4" fill="none" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+          <circle cx="37" cy="20" r="2" fill="white"/>
+        </svg>
+      </div>
+      <h3 class="feat-title"><em>Dokumentasi</em></h3>
+      <p>Menyediakan jasa dokumentasi yang sigap mengabadikan setiap momen dan keseruan yang berlangsung.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 4 – FEATURES ROW 2
+═══════════════════════════════════════════════ -->
+<section id="more-features">
+  <div class="features-grid">
+
+    <!-- Asuransi dan Kesehatan -->
+    <div class="feature-card">
+      <div class="feat-icon-ring">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 8 C24 8 10 12 10 22 C10 34 24 42 24 42 C24 42 38 34 38 22 C38 12 24 8 24 8Z"
+                fill="none" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M18 24 Q20 20 24 20 Q28 20 28 24 Q28 29 24 32 Q20 29 20 24" fill="none" stroke="white" stroke-width="2"/>
+          <polyline points="16,24 20,28 26,18" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <h3 class="feat-title"><em>Asuransi dan<br>kesehatan</em></h3>
+      <p>Liburan menjadi lebih tenang karena keselamatan dan kesehatan wisatawan adalah tanggung jawab kami.</p>
+    </div>
+
+    <!-- Keamanan -->
+    <div class="feature-card">
+      <div class="feat-icon-ring">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 6 L38 12 L38 26 C38 34 24 42 24 42 C24 42 10 34 10 26 L10 12 Z"
+                fill="none" stroke="white" stroke-width="2.5" stroke-linejoin="round"/>
+          <line x1="24" y1="18" x2="24" y2="30" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="24" y1="20" x2="24" y2="20" stroke="white" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3 class="feat-title"><em>Keamanan</em></h3>
+      <p>Kegiatan selama penelusuran goa terjamin keamanannya karena didampingi oleh pemandu profesional.</p>
+    </div>
+
+    <!-- Fasilitas Lain -->
+    <div class="feature-card">
+      <div class="feat-icon-ring">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="7" fill="none" stroke="white" stroke-width="2.5"/>
+          <circle cx="32" cy="16" r="7" fill="none" stroke="white" stroke-width="2.5"/>
+          <circle cx="24" cy="28" r="7" fill="none" stroke="white" stroke-width="2.5"/>
+          <path d="M10 42 C10 36 14 32 16 32" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <path d="M38 42 C38 36 34 32 32 32" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          <path d="M18 42 C18 38 20 35 24 35 C28 35 30 38 30 42" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h3 class="feat-title"><em>Fasilitas lain</em></h3>
+      <p>Terdapat kamar mandi, Mushola, dan Pendopo yang nyaman bagi wisatawan dan pendamping.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 5 – SIGNAGE PHOTO
+═══════════════════════════════════════════════ -->
+<section id="signage">
+  <img src="assets/images/signage-goa.jpg"
+       alt="Papan Wisata Goa Ngerong Desa Rengel"
+       class="signage-img"
+       data-fallback-bg="linear-gradient(135deg,#87CEEB,#1B7FC4)"
+       onerror="this.style.background='linear-gradient(135deg,#5aafe0,#1a6aaa)'">
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 6 – ULASAN WISATA GOA NGERONG
+═══════════════════════════════════════════════ -->
+<section id="reviews">
+  <div class="reviews-top">
+    <img src="assets/images/review-fish-pond.jpg"
+         alt="Kolam Ikan Goa Ngerong"
+         class="reviews-side-img"
+         onerror="this.style.background='linear-gradient(135deg,#3d8b3d,#1a5a1a)'">
+
+    <div class="reviews-title-block">
+      <h2 class="reviews-title">
+        ULASAN WISATA<br>
+        GOA <span class="text-orange">NGERONG</span>
+      </h2>
+    </div>
+
+    <img src="assets/images/review-entrance.jpg"
+         alt="Pintu Masuk Goa Ngerong"
+         class="reviews-side-img"
+         onerror="this.style.background='linear-gradient(135deg,#1a3a5c,#3d6a8c)'">
+  </div>
+
+  <div class="reviews-grid">
+    <!-- Review 1 -->
+    <div class="review-card">
+      <div class="star-row">★★★★★</div>
+      <p class="review-body">
+        Goa Ngerong bukan sekadar destinasi wisata alam, tapi juga tempat penuh kenangan bagi saya
+        pribadi sebagai warga asli Rengel. Sejak kecil, tempat ini selalu jadi pilihan untuk
+        menghabiskan waktu, entah itu berenang di air yang jernih dan segar, atau sekadar duduk santai
+        sambil memberi makan ikan-ikan besar yang jinak. Suasana di sekitar goa sangat sejuk dan alami,
+        membuat siapa pun betah berlama-lama. Dikelilingi pepohonan rindang dan suara gemericik air,
+        Goa Ngerong menawarkan ketenangan yang sulit ditemukan di tempat lain. Bagi saya, tempat ini
+        bukan hanya indah secara fisik, tapi juga menyimpan banyak memori indah masa kecil bersama
+        keluarga dan teman-teman.
+      </p>
+      <p class="review-author">Rain Maker</p>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="review-card">
+      <div class="star-row">★★★★★</div>
+      <p class="review-body">
+        Pengalaman menarik bisa masuk goa berair dan menikmati air terjun di dalamnya. Membutuhkan
+        beberapa alat tambahan untuk keamanan dan kenyamanan seperti sepatu boots, helm, pelampung,
+        dan perahu (dengan dayung tentunya). Masuk dari mulut goa hingga air terjun butuh waktu sekitar
+        2 jam (1 jam dengan perahu, 1 jam dengan berjalan). Ada ketentuan waktu untuk masuk hingga
+        keluar goa karna goa ini merupakan rumah kelelawar yang sangat banyak, dikhawatirkan dapat
+        menabrak para eksplorer jika tidak memperhatikan jam.
+      </p>
+      <p class="review-author">Kanzu Khairon Adli</p>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="review-card">
+      <div class="star-row">★★★★★</div>
+      <p class="review-body">
+        Lokasi wisata ini berlokasi Di kecamatan rengel kabupaten tuban. Sebuah wisata alam Yang
+        menarik, berupa gua Yang Di mengalir sebuah sungai bawah tanah Yang sangat jernih airnya.
+        Menurut penduduk lokal panjang gua ini sejauh 3 km, dengan menyusuri sungainya. Keindahan
+        sungai ini Di padu dengan eksotika berbagai fauna Yang mendiami gua ngerong. Fauna tersebut
+        adalah kelelawar. Jumlah kelelawar Yang mendiami lokasi tersebut bisa berjumlah jutaan.
+        Sebagai hewan nokturnal, kelelawar ini keluar pada saat malam Hari. Dan bergelantungan Di
+        dinding dinding gua.
+      </p>
+      <p class="review-author">Dadang Setiawan</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 7 – REAL TIME NGERONG INFORMATION
+═══════════════════════════════════════════════ -->
+<section id="realtime">
+  <h2 class="realtime-title">
+    REAL TIME <span class="text-orange">NGERONG</span> INFORMATION
+  </h2>
+  <div class="realtime-date-pill" id="realtime-date">Rabu, 7 Juli 2026</div>
+  <p class="realtime-desc">
+    Fitur ini memudahkan Anda untuk mendapatkan informasi mengenai keadaan alam serta kegiatan
+    Wisata Susur Goa Ngerong yang terus diaudit oleh pengelola secara transparan, fakta dan teraktual.
+  </p>
+  <div class="realtime-grid">
+    <div class="rt-card">
+      <div class="rt-icon">💧</div>
+      <div class="rt-label">Kejernihan Air</div>
+      <div class="rt-status-text">Status :</div>
+      <div class="rt-value">Jernih</div>
+    </div>
+    <div class="rt-card">
+      <div class="rt-icon">🌊</div>
+      <div class="rt-label">Kederasan Arus</div>
+      <div class="rt-status-text">Status :</div>
+      <div class="rt-value">Cukup deras dan permukaan air beriam</div>
+    </div>
+    <div class="rt-card">
+      <div class="rt-icon">🌙</div>
+      <div class="rt-label">Waktu Terbaik Kunjungan</div>
+      <div class="rt-status-text">Status :</div>
+      <div class="rt-value">Musim Kemarau</div>
+    </div>
+    <div class="rt-card">
+      <div class="rt-icon">🚣</div>
+      <div class="rt-label">Kuota Kunjungan Peserta</div>
+      <div class="rt-status-text">Status :</div>
+      <div class="rt-value">Tersedia : Penuh<br><small style="font-weight:400;font-size:0.8rem;">(Kuota 7 peserta/perahu)</small></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 8 – APA YANG INGIN DIJELAJAHI? (HUB)
+═══════════════════════════════════════════════ -->
+<section id="hub">
+  <div class="hub-container">
+    <h2 class="hub-heading">
+      APA YANG INGIN<br>
+      <span class="text-orange">DIJELAJAHI?</span>
+    </h2>
+    <p class="hub-sub">
+      Untuk mengetahui informasi lebih lanjut mengenai Wisata Susur Goa Ngerong, Anda dapat memilih
+      <em>flashcard</em> yang telah disediakan di bawah ini.
+    </p>
+    <div class="hub-grid">
+
+      <!-- Card 1: Mitos & Larangan -->
+      <div class="hub-card-wrap">
+        <div class="hub-card-name">
+          <span class="text-navy">Mitos &amp; </span><span class="text-orange">Larangan</span>
+        </div>
+        <div style="width:100%">
+          <img src="assets/images/hub-mitos.jpg"
+               alt="Mitos dan Larangan – Kolam Ikan Goa Ngerong"
+               class="hub-card-img"
+               onerror="this.style.background='linear-gradient(135deg,#1a4a2a,#3d8b39)'">
+        </div>
+        <a href="mitos.html" class="btn-teal" id="btn-hub-mitos">JELAJAHI</a>
+      </div>
+
+      <!-- Card 2: Eksplorasi & Pemandu -->
+      <div class="hub-card-wrap">
+        <div class="hub-card-name">
+          <span class="text-navy">Eksplorasi &amp; </span><span class="text-orange">Pemandu</span>
+        </div>
+        <div style="width:100%">
+          <img src="assets/images/hub-eksplorasi.jpg"
+               alt="Eksplorasi dan Pemandu – Cave Rafting"
+               class="hub-card-img"
+               onerror="this.style.background='linear-gradient(135deg,#0d1a2a,#1a3a5c)'">
+        </div>
+        <a href="eksplorasi.html" class="btn-teal" id="btn-hub-eksplorasi">JELAJAHI</a>
+      </div>
+
+      <!-- Card 3: Katalog Folklor -->
+      <div class="hub-card-wrap">
+        <div class="hub-card-name">
+          <span class="text-navy">Katalog </span><span class="text-orange">Folklor</span>
+        </div>
+        <div style="width:100%">
+          <img src="assets/images/hub-katalog.jpg"
+               alt="Katalog Folklor – Stalaktit Goa"
+               class="hub-card-img"
+               onerror="this.style.background='linear-gradient(135deg,#2a1a0a,#5a3a1a)'">
+        </div>
+        <a href="folklor.html" class="btn-teal" id="btn-hub-katalog">JELAJAHI</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 16 – PAKET WISATA DAN RESERVASI
+═══════════════════════════════════════════════ -->
+<section id="paket">
+  <div class="paket-title-wrap">
+    <h2 class="section-title">
+      <span class="text-navy">Paket Wisata dan </span><span class="text-orange">RESERVASI</span>
+    </h2>
+  </div>
+  <div class="paket-grid">
+    <div class="paket-img-wrap">
+      <img src="assets/images/paket-cave.jpg"
+           alt="Wisata Susur Goa Ngerong 2.5 KM"
+           class="paket-photo"
+           onerror="this.style.background='linear-gradient(160deg,#2a1505,#3d2010)'">
+      <div class="paket-badge-overlay">
+        <div class="paket-badge-text">SUSUR TIPE<br>2,5 KM</div>
+      </div>
+    </div>
+
+    <div class="paket-info">
+      <h3 class="paket-name">WISATA SUSUR GOA NGERONG</h3>
+      <div class="paket-price-pill">Rp250.000,00/ORANG</div>
+
+      <div class="paket-includes">
+        <div class="pi-item">Perahu Karet</div>
+        <div class="pi-item">Konsumsi Makan Malam (1x)</div>
+        <div class="pi-item">Dayung</div>
+        <div class="pi-item">Layanan Dokumentasi dan Storytelling</div>
+        <div class="pi-item">Helm</div>
+        <div class="pi-item">Pemandu resmi Susur Goa</div>
+        <div class="pi-item">Pelampung</div>
+        <div class="pi-item"></div>
+        <div class="pi-item">Headlamp</div>
+        <div class="pi-item"></div>
+        <div class="pi-item">Tabung Oksigen</div>
+        <div class="pi-item"></div>
+        <div class="pi-item">Asuransi</div>
+        <div class="pi-item"></div>
+      </div>
+
+      <div>
+        <a href="#footer"
+           class="btn-orange"
+           id="btn-reservasi"
+           style="display:inline-block;text-align:center;line-height:1.35;">
+          SEGERA RESERVASI<br>JELAJAHMU SEKARANG
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 17 + 18 – GALERI FOTO
+═══════════════════════════════════════════════ -->
+<section id="galeri">
+  <h2 class="galeri-heading">
+    GALERI FOTO<br>
+    <span class="text-orange">WISATA SUSUR Goa Ngerong</span>
+  </h2>
+
+  <!-- Mosaic (Gambar 17) -->
+  <div class="galeri-mosaic">
+    <img src="assets/images/galeri-1.jpg" alt="Galeri Goa Ngerong 1" class="gm-img"
+         onerror="this.style.background='linear-gradient(135deg,#1a2a4a,#2d5070)'">
+    <img src="assets/images/galeri-2.jpg" alt="Galeri Goa Ngerong 2" class="gm-img"
+         onerror="this.style.background='linear-gradient(135deg,#1a3040,#2d5060)'">
+    <img src="assets/images/galeri-3.jpg" alt="Galeri Goa Ngerong 3" class="gm-img wide"
+         onerror="this.style.background='linear-gradient(135deg,#1a2540,#2d4560)'">
+    <img src="assets/images/galeri-4.jpg" alt="Galeri Goa Ngerong 4" class="gm-img tall"
+         onerror="this.style.background='linear-gradient(135deg,#1a3550,#2d6080)'">
+  </div>
+
+  <!-- Grid (Gambar 18) -->
+  <div class="galeri-grid">
+    <img src="assets/images/galeri-5.jpg"  alt="Galeri Goa Ngerong 5"  class="gg-img" onerror="this.src='assets/images/galeri-1.jpg'">
+    <img src="assets/images/galeri-6.jpg"  alt="Galeri Goa Ngerong 6"  class="gg-img">
+    <img src="assets/images/galeri-7.jpg"  alt="Galeri Goa Ngerong 7"  class="gg-img">
+    <img src="assets/images/galeri-8.jpg"  alt="Galeri Goa Ngerong 8"  class="gg-img">
+    <img src="assets/images/galeri-9.jpg"  alt="Galeri Goa Ngerong 9"  class="gg-img" onerror="this.src='assets/images/hub-eksplorasi.jpg'">
+    <img src="assets/images/galeri-10.jpg" alt="Galeri Goa Ngerong 10" class="gg-img" onerror="this.src='assets/images/galeri-1.jpg'">
+    <img src="assets/images/galeri-11.jpg" alt="Galeri Goa Ngerong 11" class="gg-img">
+    <img src="assets/images/galeri-12.jpg" alt="Galeri Goa Ngerong 12" class="gg-img">
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 19 – EDUKASI DAN LINGKUNGAN
+═══════════════════════════════════════════════ -->
+<section id="edukasi">
+  <div class="edukasi-container">
+    <h2 class="section-title" style="margin-bottom:24px;">
+      EDUKASI DAN <span class="text-orange">LINGKUNGAN</span>
+    </h2>
+    <p class="edukasi-intro">
+      Goa Ngerong bukan sekadar tempat berlibur, melainkan kawasan wisata edukasi dan konservasi
+      lingkungan berbasis komunitas di Kabupaten Tuban. Kami berkomitmen menjaga kelestarian ekosistem
+      sungai bawah tanah melalui perpaduan sains dan kearifan lokal.
+    </p>
+    <div class="edukasi-grid">
+      <div class="edu-card">
+        <h3 class="edu-card-title">Edukasi Kualitas Air</h3>
+        <p>Mengajak wisatawan memahami pentingnya menjaga kejernihan sungai dari pencemaran sampah serta
+           mengenali kandungan amonia alami dari kotoran kelelawar (guano).</p>
+      </div>
+      <div class="edu-card">
+        <h3 class="edu-card-title">Konservasi<br>Berkelanjutan</h3>
+        <p>Edukasi nyata mengenai pentingnya menjaga keseimbangan ekosistem demi menjamin pasokan mata
+           air bersih untuk kehidupan masyarakat Desa Rengel.</p>
+      </div>
+      <div class="edu-card">
+        <h3 class="edu-card-title">Laboratorium<br>Fauna Alami</h3>
+        <p>Ruang belajar terbuka untuk mengamati langsung segala jenis dan spesies hewan yang hidup di
+           area Goa Ngerong dan sekitarnya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 20-22 – HEWAN ENDEMIK GOA NGERONG
+═══════════════════════════════════════════════ -->
+<section id="hewan">
+  <div class="hewan-container">
+    <!-- Header -->
+    <div class="hewan-header-block">
+      <h2 class="hewan-main-title">HEWAN <span class="text-orange">GOA NGERONG</span></h2>
+      <p class="hewan-header-sub">Kawasan Goa Ngerong merupakan area konservasi alami untuk ribuan ekor kelelawar dan beragam spesies ikan. Berikut informasi lengkapnya!</p>
+    </div>
+
+  <!-- 6 Kelelawar (Gambar 20) -->
+  <div class="hewan-grid-6">
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/kelelawar-larvatus.jpg" alt="Hipposideros larvatus"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#3d2010,#6b3420)'">
+      </div>
+      <div class="hewan-name-tag"><em>Hipposideros<br>larvatus (Barong)</em></div>
+    </div>
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/kelelawar-3.jpg" alt="Miniopterus schreibersi"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#3d2010,#6b3420)'">
+      </div>
+      <div class="hewan-name-tag"><em>Miniopterus schreibersi<br>(Tomosu)</em></div>
+    </div>
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/kelelawar-2.jpg" alt="Miniopterus australis"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#3d2010,#6b3420)'">
+      </div>
+      <div class="hewan-name-tag"><em>Miniopterus australis</em></div>
+    </div>
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/kelelawar-1.jpg" alt="Hipposideros diadema"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#3d2010,#6b3420)'">
+      </div>
+      <div class="hewan-name-tag"><em>Hipposideros diadema<br>(Barong Besar)</em></div>
+    </div>
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/kelelawar-4.jpg" alt="Miniopterus pusillus"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#3d2010,#6b3420)'">
+      </div>
+      <div class="hewan-name-tag"><em>Miniopterus pusillus</em></div>
+    </div>
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/kelelawar-5.jpg" alt="Megaderma spasma"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#3d2010,#6b3420)'">
+      </div>
+      <div class="hewan-name-tag"><em>Megaderma spasma</em></div>
+    </div>
+  </div>
+
+  <!-- 3 more Kelelawar (Gambar 21) – 3 dalam 1 baris rapi -->
+  <div class="hewan-grid-3">
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/kelelawar-rousettus-a.jpg" alt="Rousettus amplexicaudatos"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#3d2010,#6b3420)'">
+      </div>
+      <div class="hewan-name-tag"><em>Rousettus<br>amplexicaudatos</em></div>
+    </div>
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/kelelawar-rousettus-l.jpg" alt="Rousettus leschenaultia"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#3d2010,#6b3420)'">
+      </div>
+      <div class="hewan-name-tag"><em>Rousettus<br>leschenaultia</em></div>
+    </div>
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/kelelawar-eonicterys.jpg" alt="Eonicterys spelaea"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#3d2010,#6b3420)'">
+      </div>
+      <div class="hewan-name-tag"><em>Eonicterys spelaea</em></div>
+    </div>
+  </div>
+
+  <!-- 6 Ikan & Fauna Air (Gambar 22) -->
+  <div class="hewan-grid-fish">
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/ikan-bader.jpg" alt="Ikan bader"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#1a3a5c,#3d6080)'">
+      </div>
+      <div class="hewan-name-tag">Ikan bader</div>
+    </div>
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/fauna-bulus.jpg" alt="Bulus"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#1a3a5c,#3d6080)'">
+      </div>
+      <div class="hewan-name-tag">Bulus</div>
+    </div>
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/ikan-nila.jpg" alt="Ikan nila"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#1a3a5c,#3d6080)'">
+      </div>
+      <div class="hewan-name-tag">Ikan nila</div>
+    </div>
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/ikan-lele.jpg" alt="Ikan lele"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#1a3a5c,#3d6080)'">
+      </div>
+      <div class="hewan-name-tag">Ikan lele</div>
+    </div>
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/ikan-lele-albino.jpg" alt="Lele albino"
+             onerror="this.parentElement.style.background='linear-gradient(135deg,#1a3a5c,#3d6080)'">
+      </div>
+      <div class="hewan-name-tag">Lele albino</div>
+    </div>
+    <div class="hewan-item">
+      <div class="hewan-circle">
+        <img src="assets/images/ikan-sapu-sapu.jpg" alt="Ikan sapu-sapu"
+             onerror="this.src='assets/images/ikan-bader.jpg'">
+      </div>
+      <div class="hewan-name-tag">Ikan sapu-sapu</div>
+    </div>
+  </div>
+  </div><!-- end hewan-container -->
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 23 + 24 – FREQUENTLY ASKED QUESTIONS
+═══════════════════════════════════════════════ -->
+<section id="faq">
+  <h2 class="section-title" style="text-align:center;margin-bottom:14px;">
+    FREQUENTLY ASKED <span class="text-orange">QUESTIONS</span>
+  </h2>
+  <p class="faq-subtitle">Temukan jawaban untuk pertanyaan yang Anda ingin lebih tahu.</p>
+
+  <div class="faq-grid">
+
+    <!-- Q1 -->
+    <div class="faq-item" id="faq-1">
+      <div class="faq-q">
+        <div class="faq-q-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="9" r="5" stroke="#555" stroke-width="1.8" fill="none"/>
+            <path d="M5 24 C5 18 8.5 14 14 14 C19.5 14 23 18 23 24" stroke="#555" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="faq-q-text">Apakah Susur Goa Ngerong aman bagi pemula?</div>
+      </div>
+      <div class="faq-answer">
+        <p>Tentu saja sangat aman! Seluruh rangkaian Wisata Susur Goa Ngerong didampingi langsung oleh pemandu profesional resmi bersertifikat dan dilengkapi dengan standar keamanan, kesehatan serta asuransi yang lengkap.</p>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="faq-item" id="faq-2">
+      <div class="faq-q">
+        <div class="faq-q-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="11" stroke="#555" stroke-width="1.8" fill="none"/>
+            <polyline points="9,14 12.5,17.5 19,11" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="faq-q-text">Bagaimana cara melakukan reservasi?</div>
+      </div>
+      <div class="faq-answer">
+        <p>Anda cukup menekan ikon WhatsApp di halaman website untuk langsung terhubung ke admin. Di sana, Anda dapat menanyakan seputar Wisata Susur Goa Ngerong, memilih jadwal kunjungan dan melakukan transaksi pembayaran via <em>online</em>.</p>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="faq-item" id="faq-3">
+      <div class="faq-q">
+        <div class="faq-q-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 8 C6 6 8 5 14 5 C20 5 22 6 22 8 L22 11 C22 13 20 14 14 14 C8 14 6 13 6 11 Z" stroke="#555" stroke-width="1.8" fill="none"/>
+            <path d="M6 11 L6 20 C6 22 8 23 14 23 C20 23 22 22 22 20 L22 11" stroke="#555" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="faq-q-text">Pakaian apa yang sebaiknya dikenakan saat mengikuti kegiatan susur goa?</div>
+      </div>
+      <div class="faq-answer">
+        <p>Gunakan pakaian yang nyaman dan siap basah selama kegiatan susur berlangsung. Jangan lupa untuk membawa baju ganti tambahan dan kantong plastik. Alas kaki dan perlengkapan lain akan disediakan oleh pemandu sebelum memasuki goa.</p>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="faq-item" id="faq-4">
+      <div class="faq-q">
+        <div class="faq-q-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 14 C21 9 17.4 5 13 5 C10 5 7.5 6.8 6 9.5 C8 8.5 11 9 13 12 C15 15 14.5 19 12 21.5 C16.5 21 21 18 21 14Z" stroke="#555" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="faq-q-text">Mengapa Wisata Susur Goa Ngerong hanya dilakukan pada malam hari?</div>
+      </div>
+      <div class="faq-answer">
+        <p>Hal ini dilakukan untuk menjaga dan melindungi habitat kelelawar. Selain itu, kelelawar yang keluar pada malam hari akan memudahkan wisatawan memasuki mulut goa untuk susur. Juga, sebagai upaya meminimalisi bau yang tidak sedap dari kotoran kelelawar.</p>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="faq-item" id="faq-5">
+      <div class="faq-q">
+        <div class="faq-q-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="9" r="5" stroke="#555" stroke-width="1.8" fill="none"/>
+            <path d="M5 24 C5 18 8.5 14 14 14 C19.5 14 23 18 23 24" stroke="#555" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <div class="faq-q-text">Apakah ada batasan usia untuk mengikuti Wisata Susur Goa Ngerong?</div>
+      </div>
+      <div class="faq-answer">
+        <p>Sejauh ini masih belum ada batasan usia resmi dari pernyataan pemandu maupun pengelola Wisata Susur Goa Ngerong. Namun, demi alasan keamanan dan faktor operasional pada malam hari, aktivitas ini disarankan untuk pengunjung berusia minimal 17 tahun.</p>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="faq-item" id="faq-6">
+      <div class="faq-q">
+        <div class="faq-q-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 3 L22 7 L22 16 C22 20 18 24 14 25 C10 24 6 20 6 16 L6 7 Z" stroke="#555" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+            <line x1="14" y1="11" x2="14" y2="18" stroke="#555" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="14" cy="9.5" r="1.2" fill="#555"/>
+          </svg>
+        </div>
+        <div class="faq-q-text">Apakah ada pantangan kesehatan bagi pengunjung yang akan ikut susur?</div>
+      </div>
+      <div class="faq-answer">
+        <p>Pengunjung yang memiliki riwayat kesehatan tentang pernapasan seperti asma, ISPA, atau jantung disarankan untuk tidak memaksakan diri mengikuti kegiatan Susur Goa Ngerong untuk keselamatan pribadi. Mengingat bau dari kelelawar yang menyengat dan udara dalam Goa yang pengap.</p>
+      </div>
+    </div>
+
+    <!-- Q7 – single centered -->
+    <div class="faq-item faq-single" id="faq-7">
+      <div class="faq-q">
+        <div class="faq-q-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="11" stroke="#555" stroke-width="1.8" fill="none"/>
+            <path d="M11 11 C11 9 12.3 8 14 8 C15.7 8 17 9.3 17 11 C17 13 14 14 14 16" stroke="#555" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+            <circle cx="14" cy="19.5" r="1.2" fill="#555"/>
+          </svg>
+        </div>
+        <div class="faq-q-text">Bagaimana jika saya mempunyai banyak pertanyaan mengenai informasi kegiatan Wisata Susur Goa Ngerong Tuban?</div>
+      </div>
+      <div class="faq-answer">
+        <p>Calon pengunjung dapat menanyakan berbagai hal yang ingin diketahui melalui bot chat WhatsApp yang telah di sediakan di halaman website. Cukup dengan menekan ikon tersebut untuk langsung terhubung dengan admin. Selain proses transaksi reservasi, Anda dapat memanfaatkan layanan tersebut untuk mendapatkan informasi lain.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     GAMBAR 25 – FOOTER
+═══════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="footer-img-wrap">
+      <img src="assets/images/footer-cave.jpg"
+           alt="Wisata Susur Goa Ngerong"
+           class="footer-photo"
+           onerror="this.style.background='linear-gradient(160deg,#0a0503,#1a0d03)'">
+      <div class="footer-photo-text">WISATA SUSUR GOA<br>NGERONG</div>
+    </div>
+
+    <div class="footer-info">
+      <div>
+        <p class="footer-block-title">Ikuti Kami</p>
+        <div class="footer-socmed">
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/suloree_e?igsh=MTNzNDJyYXN0dWxxNA==" target="_blank" rel="noopener" class="socmed-link" id="btn-instagram" aria-label="Instagram SULORE">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@infosurong?_r=1&_t=ZS-97pL8ku5u8j" target="_blank" rel="noopener" class="socmed-link" id="btn-tiktok" aria-label="TikTok SULORE">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.16 8.16 0 004.77 1.52V6.76a4.85 4.85 0 01-1-.07z"/>
+            </svg>
+          </a>
+
+          <!-- X (Twitter) -->
+          <a href="https://x.com/SULORE_E" target="_blank" rel="noopener" class="socmed-link" id="btn-x-twitter" aria-label="X Twitter SULORE">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+
+        </div>
+      </div>
+
+
+      <div>
+        <p class="footer-block-title orange">Layanan Kami</p>
+
+        <!-- Nomor Telepon -->
+        <div class="footer-row">
+          <span class="footer-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;">
+              <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.47 11.47 0 003.58.57 1 1 0 011 1V21a1 1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z" fill="#1B2D6B"/>
+            </svg>
+          </span>
+          <span>0859-1065-33487</span>
+        </div>
+
+        <!-- Email -->
+        <div class="footer-row">
+          <span class="footer-row-icon">✉</span>
+          <span>InfoSuronggg@gmail.com</span>
+        </div>
+
+        <!-- Alamat dengan pin pink SVG -->
+        <div class="footer-row">
+          <span class="footer-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;flex-shrink:0;">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="#e8194b"/>
+              <circle cx="12" cy="9" r="2.5" fill="white"/>
+            </svg>
+          </span>
+          <span>Jl. Raya Rengel No.155, Desa Rengel, Kecamatan Rengel, Kabupaten Tuban, Jawa Timur.</span>
+        </div>
+
+        <div style="margin-top:10px;">
+          <a href="https://maps.google.com/?q=Goa+Ngerong+Rengel+Tuban" target="_blank" rel="noopener" class="btn-orange" id="btn-google-maps">
+            Buka Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-copyright">
+    &copy; 2026 SULORE – Wisata Susur Goa Ngerong. All rights reserved.
+  </p>
+</footer>
+
+<!-- CSS untuk Lenis Smooth Scroll -->
+<style>
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  .lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis-stopped {
+    overflow: hidden;
+  }
+  .lenis-scrolling iframe {
+    pointer-events: none;
+  }
+</style>
+
+<!-- Library GSAP & Lenis CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+<script src="js/main.js"></script>
+<script type="module">
+  import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0/dist/web.js'
+
+  Typebot.initBubble({
+    typebot: "faq-wb7c7ay",
+    theme: {
+      button: { backgroundColor: "#1D1D1D" },
+      chatWindow: { backgroundColor: "#F8F8F8" },
+    },
+  });
+</script>
+</body>
 </html>
+
