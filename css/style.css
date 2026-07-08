@@ -501,7 +501,14 @@ ul { list-style: none; }
 }
 
 /* ── HUB ── */
-#hub { padding: 80px 40px; background: var(--white); }
+#hub { 
+  padding: 80px 40px; 
+  background: var(--white); 
+}
+.hub-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
 .hub-heading {
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
@@ -519,6 +526,7 @@ ul { list-style: none; }
 }
 .hub-grid {
   max-width: 1140px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
