@@ -617,6 +617,9 @@ ul { list-style: none; }
   padding: 4px 0;
 }
 .pi-item::before { content: '•'; color: var(--navy); font-weight: 900; flex-shrink: 0; }
+.pi-item:empty { display: none !important; }
+.pi-item:empty::before { content: none !important; }
+
 
 /* ── GALERI FOTO ── */
 #galeri { padding: 80px 40px; background: var(--white); }
