@@ -1198,3 +1198,13 @@ li:not(:has(*)):not(:has(text)) { }
   transform: translateY(0);
 }
 
+/* Tablet Layout: 601px to 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .intro-grid, .paket-grid, .footer-grid, .mitos-grid,
+  .features-grid, .hub-grid, .edukasi-grid, .realtime-grid,
+  .reviews-grid, .folklor-grid, .guide-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+
